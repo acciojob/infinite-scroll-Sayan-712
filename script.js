@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function() {
 		listItem.textContent="List item";
 		infiList.appendChild(listItem);
 	}
-for(let i=1;i<=10;i++)
+for(let i=0;i<=10;i++)
 	{
 		addListItem();
 	}
