@@ -5,7 +5,7 @@ for(let i=1;i<=10;i++)
 		list.innerHTML+=<li>Item $(i)</li>
 	}
 let n=10;
-list.addEventListener("scroll",()=>)
+list.addEventListener("scroll",()=>
 {
 	if(list.scrollHeight-list.scrollTop-list.clientHeight<1)
 	{
@@ -14,4 +14,4 @@ list.addEventListener("scroll",()=>)
 		<li>Item $(n+2)</li>
 		n=n+2;
 	}
-}
+})
