@@ -1,17 +1,25 @@
 //your code here!
-let list=document.querySelector("#infi-list");
+document.addEventListener("DOMContentLoaded",function() {
+	const infiList=document.getElementById("infi-List");
+	function addListItem() {
+		const ListItem=document.createElement("li");
+		listItem.textContent="List item";
+		infiList.appendChild(listItem);
+	}
 for(let i=1;i<=10;i++)
 	{
-		list.innerHTML+=<li>Item $(i)</li>
+		addListItem();
 	}
-let n=10;
-list.addEventListener("scroll",()=>
-{
-	if(list.scrollHeight-list.scrollTop-list.clientHeight<1)
+function handleScroll() {
+	const{scrollTop,scrollHeight,clientHeight}=infiList;
+	if(scrollTop+clientHeight>=scrollHeight)
 	{
-		list.innerHTML+=
-			<li>Item $(n+1)</li>
-		<li>Item $(n+2)</li>
-		n=n+2;
+		for(let i=0;i<2;i++)
+			{
+				addListItem();
+			}
 	}
-})
+}
+	infiList.addEventListener("scroll",handleScroll);
+});
+
